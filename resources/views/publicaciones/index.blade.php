@@ -13,7 +13,7 @@
     <div class="row" >
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">FILMOTECA</h2>
+                <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">PUBLICACIONES</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('publicacion.create') }}"> Create New Record</a>

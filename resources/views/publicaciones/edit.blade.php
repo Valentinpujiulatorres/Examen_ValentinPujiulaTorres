@@ -47,7 +47,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>contenido</strong>
-                <textarea name="contenido" id="sinopsis" class="form-control" placeholder="contenido Here:" value="{{$publicacion->contenido}}">{{old('sinopsis')}}</textarea>
+                <textarea name="contenido" id="sinopsis" class="form-control" placeholder="contenido Here:" value="{{$publicacion->contenido}}">{{$publicacion->contenido}}</textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

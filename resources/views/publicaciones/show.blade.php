@@ -1,61 +1,57 @@
-@extends('peliculas.layout')
+@extends('publicaciones.layout')
   
 @section('content')
 <div style="margin: 3%; background-color:white; padding :12%">
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2 style="margin-bottom: 50px;" >FILM INFO</h2>
+                <h2 style="margin-bottom: 50px;" >Publication info</h2>
             </div>
             <div class="pull-right">
-                <a style="margin-right: 50px;" class="btn btn-primary" href="{{ route('peliculas.index') }}"> Back</a>
+                <a style="margin-right: 50px;" class="btn btn-primary" href="{{ route('publicacion.index') }}"> Back</a>
             </div>
         </div>
     </div>
    
     <div class="row">
-        <!-- <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <img src="/image/{{ $pelicula->image }}" width="400px">
-            </div>
-        </div> -->
+        
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Name:</strong>
-                {{ $pelicula->nombre }}
+                <strong>Titulo:</strong>
+                {{ $publicacion->titulo }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>saga</strong>
-                {{ $pelicula->saga }}
+                <strong>Extracto</strong>
+                {{ $publicacion->extracto }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Age Rating</strong>
+                <strong>acces</strong>
                 
-                {{ $pelicula->calificacion }}
+                {{ $publicacion->acceso }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Lanzamiento</strong>
-                {{ $pelicula->lanzamiento }}
+                <strong>caducable</strong>
+                {{$publicacion->caducable ? 'true' : 'false'}}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>En Emision ?</strong>
-                {{ $pelicula->emision}}
+                <strong>comentable</strong>
+                {{$publicacion->comentable ? 'true' : 'false'}}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>SINOPSIS</strong>
+                <strong>Contenido</strong>
                 <hr>
-                {{ $pelicula->sinopsis }}
+                {{ $publicacion->contenido }}
             </div>
         </div>
         
