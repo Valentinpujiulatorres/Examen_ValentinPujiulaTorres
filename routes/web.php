@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PublicacionController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Sail\Console\PublishCommand;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,14 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::resource('publicacion', PublicacionController::class)->middleware(['auth']);
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('register');
 });
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
