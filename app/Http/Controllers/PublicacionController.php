@@ -55,7 +55,7 @@ class PublicacionController extends Controller
 
 
      
-        return redirect()->route('publicaciones.index')
+        return redirect()->route('publicacion.index')
                         ->with('success','Publicacion P. Con exito.');
     }
 
